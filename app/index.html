@@ -26,11 +26,11 @@
 
         <h2>Cocktails Recipes</h2>
         <ul class="recipes">
-          <li>
-            <div class="cocktail" data-id="{{ cocktail.id }}">
-              <h4>{{ cocktail.name }}</h4>
-              <div>{{ cocktail.ingredients }}</div>
-              <p>{{ cocktail.instructions }}</p>
+          <li ng-repeat="c in cocktails">
+            <div class="cocktail" data-id="{{ c.id }}">
+              <h4>{{ c.name }}</h4>
+              <div>{{ c.ingredients }}</div>
+              <p>{{ c.instructions }}</p>
             </div>
           </li>
         </ul>

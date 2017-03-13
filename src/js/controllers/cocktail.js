@@ -5,6 +5,7 @@ function CocktailController ($scope) {
   $scope.addCocktail = function (cocktail) {
     cocktail.id = $scope.cocktails.length + 1;
     $scope.cocktails.push(cocktail);
+    $scope.cocktail = {};
     console.log($scope.cocktails);
   };
 };
