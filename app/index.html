@@ -13,7 +13,28 @@
         <input type="text" ng-model="name" />
         <h3>Nice to meet you, {{ name }}!</h3>
       </div>
-      <p>Welcome to your life.</p>
+
+      <div ng-controller="CocktailController">
+        <h2>Add a Cocktail!</h2>
+        <form ng-submit="addCocktail(cocktail)">
+          <input type="text" ng-model="cocktail.name" />
+          <input type="text" ng-model="cocktail.ingredients"/>
+          <textarea ng-model="cocktail.instructions">
+          </textarea>
+          <button>Add it!</button>
+        </form>
+
+        <h2>Cocktails Recipes</h2>
+        <ul class="recipes">
+          <li>
+            <div class="cocktail" data-id="{{ cocktail.id }}">
+              <h4>{{ cocktail.name }}</h4>
+              <div>{{ cocktail.ingredients }}</div>
+              <p>{{ cocktail.instructions }}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
     <script src="js/bundle.js"></script>
   </body>
