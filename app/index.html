@@ -9,8 +9,9 @@
   </head>
   <body ng-app="listular">
     <div class="container">
-      <div ng-controller="CounterController">
-        <button ng-click="sayHi()">Click Me!</button>
+      <div ng-controller="GreetingController">
+        <input type="text" ng-model="name" />
+        <h3>Nice to meet you, {{ name }}!</h3>
       </div>
       <p>Welcome to your life.</p>
     </div>

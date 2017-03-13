@@ -1,7 +1,7 @@
 import angular from 'angular';
 
-import CounterController from './controllers/counter';
+import GreetingController from './controllers/greeting';
 
 angular
   .module('listular', [])
-  .controller('CounterController', CounterController);
+  .controller('GreetingController', GreetingController);
